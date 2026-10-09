@@ -4,14 +4,14 @@ A simple, menu-driven expense tracker built with Python. It lets you add expense
 
 ## Features
 
-- **Add Expense** — enter an expense name and its cost.
-- **View Expenses** — display all recorded expenses.
-- **Show Total** — calculate and print the total cost of all recorded expenses.
-- **Menu-driven interface** — choose an action from the command-line menu.
+- Add Expense — enter an expense name and its cost.
+- View Expenses — display all recorded expenses.
+- Show Total — calculate and print the total cost of all recorded expenses.
+- Menu-driven interface — choose an action from the command-line menu.
 
 ## How It Works
 
-The project uses a **list of dictionaries** to store expense data:
+The project uses a list of dictionaries to store expense data:
 
 - The list (`lis1`) holds all expenses.
 - Each dictionary represents one expense and contains:
@@ -77,4 +77,8 @@ When the program runs, choose an option:
 
 ---
 
-*This is a beginner Python project built to practise core programming concepts through a practical example.*
+This is a beginner Python project built to practise core programming concepts through a practical example.
+
+# expense-tracker
+it daily expense tracker 
+
