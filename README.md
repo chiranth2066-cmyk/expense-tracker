@@ -1,84 +1,106 @@
 # Expense Tracker
 
-A simple, menu-driven expense tracker built with Python. It lets you add expenses, view the expenses you've entered, and calculate the total amount spent.
+A simple, terminal-based expense tracker built with Python. Track daily spending, organize expenses by category, and manage your records using a local JSON file.
 
 ## Features
 
-- Add Expense — enter an expense name and its cost.
-- View Expenses — display all recorded expenses.
-- Show Total — calculate and print the total cost of all recorded expenses.
-- Menu-driven interface — choose an action from the command-line menu.
+- **Add expenses** — Record the category, item name, and amount.
+- **View expenses** — Display expenses organized by date.
+- **Calculate total spending** — Find the total amount spent across all recorded dates.
+- **Edit expenses** — Update the amount of an existing expense.
+- **Delete expenses** — Remove expenses you no longer need.
+- **Persistent storage** — Save your data locally in `store.json`.
 
-## How It Works
+## Tech Stack
 
-The project uses a list of dictionaries to store expense data:
+- Python
+- JSON for data storage
+- `datetime` for date handling
+- `pprint` for formatted output
 
-- The list (`lis1`) holds all expenses.
-- Each dictionary represents one expense and contains:
-  - `item` — the name or description of the expense.
-  - `amount` — the cost of the expense.
+## Project Structure
 
-For example, an expense is stored in this format:
-
-```python
-{"item": "Notebook", "amount": 50}
+```text
+expense-tracker/
+├── main.py
+├── store.json
+└── README.md
 ```
 
-The program has three main functions:
+*Note: Replace `main.py` with your actual Python filename if it differs.*
 
-| Function | Purpose |
-|---|---|
-| `add_exp()` | Gets an expense name and cost from the user, then adds it to the list. |
-| `display()` | Prints the stored expenses in a readable format using `pprint`. |
-| `total()` | Adds the `amount` values of all expenses and prints the total. |
+## Getting Started
 
-## Requirements
+### 1. Clone the repository
 
-- Python 3
+```bash
+git clone https://github.com/chiranth2066-cmyk/expense-tracker.git
+cd expense-tracker
+```
 
-The project uses Python's built-in `pprint` module, so no additional packages are required.
+### 2. Run the application
 
-## How to Run
+```bash
+python main.py
+```
 
-1. Make sure Python 3 is installed.
-2. Save the program as `exp_tracker.py`.
-3. Open a terminal in the folder containing the file.
-4. Run:
+Make sure Python 3 is installed on your system.
 
-   ```bash
-   python exp_tracker.py
-   ```
+### 3. Use the menu
 
-   Depending on your setup, you may need to use `python3 exp_tracker.py` instead.
+```text
+Expense Tracker
+1. Add Expense
+2. View Expenses
+3. Show Total
+4. Edit
+5. Delete
+```
 
-## Menu Options
+Choose an option and follow the terminal prompts.
 
-When the program runs, choose an option:
+## Data Storage
 
-1. **Add Expense** — enter the expense and its cost.
-2. **View Expenses** — see the expenses entered during the current run.
-3. **Show Total** — see the sum of all recorded expenses.
-4. **Exit** — close the program.
+Expenses are stored in `store.json`, grouped by date.
 
-## Current Limitations
+Example:
 
-- Expenses are stored in memory, so they are cleared when the program exits.
-- Expense costs are entered as whole numbers.
-- The program does not currently include editing, deleting, or saving expenses to a file.
+```json
+{
+  "2026-10-22": [
+    {
+      "category": "Food",
+      "item": "Lunch",
+      "amount": 150
+    }
+  ]
+}
+```
 
-## What I Practised
+Your expense records are stored locally, so keep a backup of `store.json` if the data matters to you.
 
-- Python lists and dictionaries
-- Writing and calling functions
-- Loops and conditional statements
-- Getting input from users
-- Iterating through a list to calculate a total
-- Printing structured data with `pprint`
+## Version History
+
+### v2.0
+- Added expense editing.
+- Added expense deletion.
+- Improved expense display and total calculation.
+- Organized expense records by date.
+
+## Future Improvements
+
+- Filter expenses by category.
+- Generate monthly expense summaries.
+- Add input validation and error handling.
+- Display spending trends and reports.
+- Build a graphical user interface.
+
+## Author
+
+**Chiranth C**
+
+[GitHub Repository](https://github.com/chiranth2066-cmyk/expense-tracker)
 
 ---
 
-This is a beginner Python project built to practise core programming concepts through a practical example.
-
-# expense-tracker
-it daily expense tracker 
-
+Built as a Python project to practice functions, dictionaries, lists, loops, file handling, and JSON data management.
