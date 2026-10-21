@@ -1,0 +1,14 @@
+{
+    "2026-10-19": [
+        {
+            "catogory": "food",
+            "item": "dosa",
+            "amount": 100
+        },
+        {
+            "catogory": "run",
+            "item": "shrt",
+            "amount": 100
+        }
+    ]
+}
